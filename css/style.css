@@ -15,9 +15,11 @@ header{
     width:150px;
     margin-left:10rem;
     border-radius:1px;
+   
 }
 
-nav{
+nav, 
+.navigation{
     display:flex;
     font-weight: bold;
     color:#102E44;
@@ -143,6 +145,7 @@ ul{
 
 .contacts-logo{
   width: 6rem;
+  
 }
 
 footer{
