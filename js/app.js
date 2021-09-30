@@ -9,9 +9,11 @@ let messageOne = () => {
     if (garden === 'NO' || garden === 'N') {
         alert("I'm sorry, you didn't get it right");
 
-    } else {
+    } else if (garden === 'YES' || garden === 'Y') {
         alert("That's correct!");
         counter++;
+    } else {
+        alert("Invalid response");
     }
 }
 messageOne();
@@ -21,9 +23,11 @@ let messageTwo = () => {
     if (song === 'NO' || song === 'N') {
         alert("I'm sorry, you didn't get it right");
 
-    } else {
+    } else if (song === 'YES' || song === 'Y') {
         alert("That's correct!");
         counter++;
+    } else {
+        alert("Invalid response");
     }
 }
 messageTwo();
@@ -33,9 +37,11 @@ let messageThree = () => {
     if (paint === 'NO' || paint === 'N') {
         alert("I'm sorry, you didn't get it right");
 
-    } else {
+    } else if (paint === 'YES' || paint === 'Y') {
         alert("That's correct!");
         counter++;
+    } else {
+        alert("Invalid response");
     }
 }
 messageThree();
@@ -44,9 +50,11 @@ let podcast = prompt("Do I like to listen to podcast on my way to work? (Yes/No)
 let messageFour = () => {
     if (podcast === 'NO' || podcast === 'N') {
         alert("I'm sorry, you didn't get it right");
-    } else {
+    } else if (podcast === 'YES' || podcast === 'Y') {
         alert("That's correct!");
         counter++;
+    } else {
+        alert("Invalid response");
     }
 }
 messageFour();
@@ -55,9 +63,11 @@ let dog = prompt("Is my dog's name Kai? (Yes/No)").toUpperCase();
 let messageFive = () => {
     if (dog === 'NO' || dog === 'N') {
         alert("I'm sorry, you didn't get it right");
-    } else {
+    } else if (dog === 'YES' || dog === 'Y') {
         alert("That's correct!");
         counter++;
+    } else {
+        alert("Invalid response");
     }
 }
 messageFive();
