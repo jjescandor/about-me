@@ -14,7 +14,9 @@ let namePrompt = () => {
     return name;
 }
 
-let welcomeMessageOne = alert(`Hello ${namePrompt()}, before I let you in, we're gonna play a little game`);
+let user = namePrompt()
+
+let welcomeMessageOne = alert(`Hello ${user}, before I let you in, we're gonna play a little game`);
 
 
 
@@ -58,7 +60,7 @@ do {
 } while (counter <= 0)
 
 let welcomeMessageTwo = () => {
-    alert(`You answered ${counter} question${questionNumber()} correctly. Welcome to my personal website ${name}!`);
+    alert(`You answered ${counter} question${questionNumber()} correctly. Welcome to my personal website ${user}!`);
 }
 
 welcomeMessageTwo();
