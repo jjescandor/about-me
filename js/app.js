@@ -1,77 +1,35 @@
-"use strict";
-let name = prompt("Hi there, what is your name?");
-let welcomeMessageOne = alert(`Hello ${name}, before I let you in, we're gonna play a little game`);
+'use strict';
+
+let namePrompt = () => {
+    let name = prompt("Hi there, what is your name?");
+    if (name === undefined || name === null || name === '') {
+        while (name === undefined || name === null || name === '') {
+            alert("You must enter a valid name")
+            name = prompt("What is your name?");
+        }
+
+    } else {
+        return name;
+    }
+    return name;
+}
+
+let welcomeMessageOne = alert(`Hello ${namePrompt()}, before I let you in, we're gonna play a little game`);
+
+
+
+let checkAnswer = (answer) => {
+    if (answer === 'NO' || answer === 'N') {
+        alert("I'm sorry, you didn't get it right");
+    } else if (answer === 'YES' || answer === 'Y') {
+        alert("That's correct!");
+        counter++;
+    } else {
+        alert("Invalid response");
+    }
+}
 
 let counter = 0;
-
-let garden = prompt("Do I like gardening? (Yes/No)").toUpperCase();
-let messageOne = () => {
-    if (garden === 'NO' || garden === 'N') {
-        alert("I'm sorry, you didn't get it right");
-
-    } else if (garden === 'YES' || garden === 'Y') {
-        alert("That's correct!");
-        counter++;
-    } else {
-        alert("Invalid response");
-    }
-}
-messageOne();
-
-let song = prompt("Is 'Both Sides Now' one of my favorite songs? (Yes/No)").toUpperCase();
-let messageTwo = () => {
-    if (song === 'NO' || song === 'N') {
-        alert("I'm sorry, you didn't get it right");
-
-    } else if (song === 'YES' || song === 'Y') {
-        alert("That's correct!");
-        counter++;
-    } else {
-        alert("Invalid response");
-    }
-}
-messageTwo();
-
-let paint = prompt("Do I like to paint? (Yes/No)").toUpperCase();
-let messageThree = () => {
-    if (paint === 'NO' || paint === 'N') {
-        alert("I'm sorry, you didn't get it right");
-
-    } else if (paint === 'YES' || paint === 'Y') {
-        alert("That's correct!");
-        counter++;
-    } else {
-        alert("Invalid response");
-    }
-}
-messageThree();
-
-let podcast = prompt("Do I like to listen to podcast on my way to work? (Yes/No)").toUpperCase();
-let messageFour = () => {
-    if (podcast === 'NO' || podcast === 'N') {
-        alert("I'm sorry, you didn't get it right");
-    } else if (podcast === 'YES' || podcast === 'Y') {
-        alert("That's correct!");
-        counter++;
-    } else {
-        alert("Invalid response");
-    }
-}
-messageFour();
-
-let dog = prompt("Is my dog's name Kai? (Yes/No)").toUpperCase();
-let messageFive = () => {
-    if (dog === 'NO' || dog === 'N') {
-        alert("I'm sorry, you didn't get it right");
-    } else if (dog === 'YES' || dog === 'Y') {
-        alert("That's correct!");
-        counter++;
-    } else {
-        alert("Invalid response");
-    }
-}
-messageFive();
-
 let questionNumber = () => {
     if (counter > 1) {
         return 's';
@@ -80,4 +38,27 @@ let questionNumber = () => {
     }
 }
 
-let welcomeMessageTwo = alert(`You answered ${counter} question${questionNumber()} correctly. Welcome to my personal website ${name}!`);
+do {
+    let garden = prompt("Do I like gardening? (Yes/No)").toUpperCase();
+    checkAnswer(garden);
+    let song = prompt("Is 'Both Sides Now' one of my favorite songs? (Yes/No)").toUpperCase();
+    checkAnswer(song);
+    let paint = prompt("Do I like to paint? (Yes/No)").toUpperCase();
+    checkAnswer(paint);
+    let podcast = prompt("Do I like to listen to podcast on my way to work? (Yes/No)").toUpperCase();
+    checkAnswer(podcast);
+    let dog = prompt("Is my dog's name Kai? (Yes/No)").toUpperCase();
+    checkAnswer(dog);
+
+    questionNumber();
+
+    if (counter === 0) {
+        alert("You must answer at least one question correctly to proceed");
+    }
+} while (counter <= 0)
+
+let welcomeMessageTwo = () => {
+    alert(`You answered ${counter} question${questionNumber()} correctly. Welcome to my personal website ${name}!`);
+}
+
+welcomeMessageTwo();

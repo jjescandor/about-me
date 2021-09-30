@@ -48,6 +48,11 @@ h2{
  
 }
 
+#hire-button{
+    color: white;
+    text-decoration: none;
+}
+
 h1{
     margin-bottom:2rem;
     font-size:2.5rem;
@@ -65,11 +70,21 @@ h1{
     color:white;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
+    transition-duration: 0.6s;
+    cursor:pointer;
 }
 
 #hire-me:hover{
     color:black;
     background-color: #ff3333;
+    transition-duration: 0.6s;
+}
+
+#hire-me:active{
+    color:black;
+    background-color: #ff3333;
+    transform: scale(0.9);
+    transition-duration: 0.4s;
 }
 
 #profile-pic{
@@ -124,6 +139,10 @@ ul{
     list-style-type: square;
     margin:2rem;
     font-size:2rem;
+}
+
+.contacts-logo{
+  width: 6rem;
 }
 
 footer{
