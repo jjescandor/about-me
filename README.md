@@ -1,15 +1,15 @@
 # about-me
 ### Lab 02
 
-I built a guessing game website with five  (yes/no) questions prompted to the user when they load the rendered page [here](https://jjescandor.github.io/about-me/). The user has to provide a name and answer at least one question correctly to enter the website.
+> I built a guessing game website with five  (yes/no) questions prompted to the user when they load the rendered page [here](https://jjescandor.github.io/about-me/). The user has to provide a name and answer at least one question correctly to enter the website.
 
 ## The Five questions are:
 
-1.) Do I like gardening?<br/>
-2.) Is 'Both Sides Now' one of my favorite songs?<br/>
-3.) Do I like to paint?<br/>
-4.) Do I like to listen to podcast on my way to work?<br/>
-5.) Is my dog's name Kai?<br/>
+1. Do I like gardening?
+2. Is 'Both Sides Now' one of my favorite songs?
+3. Do I like to paint?
+4. Do I like to listen to podcast on my way to work?
+5. Is my dog's name Kai?
 
 ### Biography
 I'm a US Navy veteran, a Systems Engineer and a Defense Consultant. I spent my Naval career as a Systems and Logistics Analyst. I was deployed to the Middle East aboard USS Truman and Djibouti, Africa. I also spent a tour overseas in Japan. I currently live in Virginia Beach, Va with my dog Kai and my cat Luna I have an associates degree in Computer Science from the University of Maryland. I am currently pursuing a bachelor's degree in Computer Science from Florida International University as well as a software development certification from Code Fellows.<br/>
