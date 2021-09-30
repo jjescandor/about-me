@@ -1,0 +1,132 @@
+body{
+   background-color:whitesmoke;
+   margin:10px;
+   font-family:Arial;
+   color:#404040;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#personal-logo{
+    height:150px;
+    width:150px;
+    margin-left:10rem;
+    border-radius:1px;
+}
+
+nav{
+    display:flex;
+    font-weight: bold;
+    color:#102E44;
+}
+
+.navigation:hover{
+    color:red;
+    cursor:pointer;
+}
+
+main{
+    margin:0 4rem;
+}
+
+h2{
+    margin:2rem;
+}
+
+.intro{
+    display:flex;
+    align-items: center;
+}
+
+.personal-intro{
+    margin:6rem;
+    font-size:1.5rem;
+    line-height: 1.5;
+ 
+}
+
+h1{
+    margin-bottom:2rem;
+    font-size:2.5rem;
+    text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+#hire-me{
+    margin-top:3rem;
+    width:6rem;
+    align-items: center;
+    justify-content: space-between;
+    padding:.8rem;
+    background-color:#102E44;
+    border-radius:10px;
+    color:white;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+#hire-me:hover{
+    color:black;
+    background-color: #ff3333;
+}
+
+#profile-pic{
+    width:20rem;
+    margin:4rem;
+    border-radius:10px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.about-me{
+    margin:6rem;
+}
+
+p{
+    font-size:1.2rem;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+    color:blue;
+}
+
+.skills{
+    margin:6rem;
+}
+
+img{
+    width:5rem;
+    margin:0.8rem;
+    border-radius: 10px;;
+}
+
+.projects{
+    margin:6rem;
+}
+
+li{
+    line-height: 3rem;
+}
+
+.contact-me{
+    margin:6rem;
+}
+
+#contacts-logo{
+    width:30rem;
+}
+
+ul{
+    list-style-type: square;
+    margin:2rem;
+    font-size:2rem;
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+}
