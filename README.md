@@ -1,7 +1,7 @@
 # about-me
 ### Lab 02
 
-I built a guessing game website with five  (yes/no) questions prompted to the user when they load the rendered page [here](https://jjescandor.github.io/about-me/). The user has to provide a name and answer at least one question correctly to enter the website.
+I built a guessing game website with seven questions prompted to the user when they load the rendered page [here](https://jjescandor.github.io/about-me/). The user has to provide a name and answer at least one question correctly to enter the website.
 
 ## The Five questions are:
 
