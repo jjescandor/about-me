@@ -103,7 +103,8 @@ h1{
     box-shadow: 0 10px 6px -6px #777;
 }
 
-.about-me{
+.about-me,
+.top-ten{
     margin:6rem;
 }
 
