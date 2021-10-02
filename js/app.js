@@ -49,9 +49,7 @@ do {
     checkAnswer(podcast);
     let dog = prompt(`Is my dog's name Kai? (Yes/No) 🐕`).toUpperCase();
     checkAnswer(dog);
-
     questionNumber();
-
     if (counter === 0) {
         alert(`You must answer at least one question about me correctly to proceed.`);
     }
@@ -107,9 +105,10 @@ while (tries && !isCorrect) {
     if (!isCorrect) {
         alert(`Try again.\r\nGuess remaining: ${tries}`)
     }
-    if (tries === 0) {
-        alert(`You didn't give a correct answer 😔\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
-    }
+}
+
+if (!isCorrect) {
+    alert(`You didn't give a correct answer 😔\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
 }
 
 
