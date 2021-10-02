@@ -132,6 +132,7 @@ img{
     margin:6rem;
 }
 
+
 li{
     line-height: 3rem;
 }
@@ -149,6 +150,11 @@ ul{
     margin:2rem;
     font-size:2rem;
 }
+
+ol{
+    list-style-type: decimal;
+  }
+  
 
 .contacts-logo{
   width: 6rem;
