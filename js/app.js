@@ -105,7 +105,7 @@ while (tries && !isCorrect) {
         }
     }
     if (!isCorrect) {
-        alert('guess remaining: ' + tries)
+        alert(`Try again.\r\nGuess remaining: ${tries}`)
     }
     if (tries === 0) {
         alert(`You didn't give a correct answer 😔\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
@@ -114,4 +114,6 @@ while (tries && !isCorrect) {
 
 
 let messageFour = alert(`You answered ${counter} out of 7 questions correctly. Welcome to my page ${user}! 😀`);
+
+
 
