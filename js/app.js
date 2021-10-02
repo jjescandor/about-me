@@ -16,7 +16,7 @@ let namePrompt = () => {
 
 let user = namePrompt()
 
-let messageOne = alert(`Hello ${user}, before I let you in, you're gonna play three games.\r\nThe first game will test how well you know me.`);
+let messageOne = alert(`Hello ${user}, before I let you in, you're gonna play three games. 🎲 🎮\r\nThe first game will test how well you know me.`);
 
 let checkAnswer = (answer) => {
     if (answer === 'NO' || answer === 'N') {
