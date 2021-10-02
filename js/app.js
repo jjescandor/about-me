@@ -77,14 +77,14 @@ for (let i = 0; i < 3; i++) {
         userNumber = prompt(`Enter a number again`);
         guesses.push(userNumber);
     } else if (parseInt(userNumber) === randomNumber) {
-        alert(`Computer Number:  ${randomNumber}\r\nYour Number: ${userNumber} \r\nYou got it right 😀`);
+        alert(`Computer Generated Number:  ${randomNumber}\r\nYour guess: ${userNumber} \r\nYou got it right 😀`);
         counter++;
         break;
     }
 }
 
 if (parseInt(userNumber) !== randomNumber) {
-    alert(`Computer Number: ${randomNumber}\r\nYour guesses: ${guesses}\r\nYou did not get it right 😔`);
+    alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guesses}\r\nYou did not get it right 😔`);
 }
 
 let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of the favorite places that I have visited.`);
