@@ -1,6 +1,6 @@
 'use strict';
-
-let namePrompt = () => {
+//Welcome Message
+const namePrompt = () => {
     let name = prompt(`Hi there 👋, what is your name?`);
     if (name === undefined || name === null || name === '') {
         while (name === undefined || name === null || name === '') {
@@ -13,31 +13,33 @@ let namePrompt = () => {
     }
     return name;
 }
+const user = namePrompt()
 
-let user = namePrompt()
-
-let messageOne = alert(`Hello ${user}, before I let you in, you're gonna play three games. 🎲 🎮\r\nThe first game will test how well you know me.`);
-
-let checkAnswer = (answer) => {
+//First game
+const messageOne = alert(`Hello ${user}, before I let you in, you're gonna play three games. 🎲 🎮\r\nThe first game will test how well you know me.`);
+//Checks if answer is correct
+const checkAnswer = (answer) => {
+    // while (answer !== 'NO' || answer !== 'N' || answer !== 'YES' || answer !== 'Y') {
+    //     answer = prompt(`Invalid response 😔\r\nEnter a valid answer`).toUpperCase();
+    // }
     if (answer === 'NO' || answer === 'N') {
         alert(`I'm sorry, you didn't get it right 😔`);
     } else if (answer === 'YES' || answer === 'Y') {
         alert(`That's correct! 😀`);
-        counter++;
+        score++;
     } else {
-        alert(`Invalid response 😔`);
+        alert('Invalid Response 😔');
     }
 }
-
-let counter = 0;
-let questionNumber = () => {
-    if (counter > 1) {
+let score = 0;
+const questionNumber = () => {
+    if (score > 1) {
         return 's';
     } else {
         return '';
     }
 }
-
+//Loop will run until user inputs at least one answer correctly
 do {
     let garden = prompt(`Do I like gardening? (Yes/No) 🪴`).toUpperCase();
     checkAnswer(garden);
@@ -50,83 +52,77 @@ do {
     let dog = prompt(`Is my dog's name Kai? (Yes/No) 🐕`).toUpperCase();
     checkAnswer(dog);
     questionNumber();
-    if (counter === 0) {
+    if (score === 0) {
         alert(`You must answer at least one question about me correctly to proceed.`);
     }
-} while (counter <= 0)
+} while (score <= 0)
 
-let messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
-
-let guesses = [];
-let userNumber = prompt(`Enter a number:`);
-while (isNaN(parseInt(userNumber))) {
-    userNumber = prompt(`Enter a valid number:`);
-}
-
-guesses.push(userNumber);
-
-let randomNumber = Math.floor(Math.random() * 9);
-
+//Second Game
+const messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
+//Initializes tries to 4 and isCorrect to false
 let tries = 4;
-
-for (let i = 0; i < 3; i++) {
+let isCorrect = false;
+//Array container for user guesses
+const guessesOne = [];
+//Generates the random number
+const randomNumber = Math.floor(Math.random() * 9);
+//Loop will run until tries is a falsy or answer is correct
+while (tries && !isCorrect) {
+    let userNumber = prompt(`Enter a number:`);
+    //Checks if input is a valid number
+    while (isNaN(parseInt(userNumber))) {
+        userNumber = prompt(`Enter a valid number:`);
+    }
+    tries--;
+    //Pushes valid user input into guessesOne Array
+    guessesOne.push(userNumber);
+    //Checks valid user input againts random computer generated number
     if (parseInt(userNumber) > randomNumber) {
-        tries--;
-        alert(`Too High`);
-        userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
-        while (isNaN(parseInt(userNumber))) {
-            userNumber = prompt(`Enter a valid number:`);
-        }
-        guesses.push(userNumber);
+        alert(`Too High 😔\r\n\Guess reamining: ${tries}`);
     } else if (parseInt(userNumber) < randomNumber) {
-        tries--;
-        alert(`Too Low`);
-        userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
-        while (isNaN(parseInt(userNumber))) {
-            userNumber = prompt(`Enter a valid number:`);
-        }
-        guesses.push(userNumber);
+        alert(`Too Low 😔\r\n\Guess reamining: ${tries}`);
     } else if (parseInt(userNumber) === randomNumber) {
-        alert(`Computer Generated Number:  ${randomNumber}\r\nYour guess: ${userNumber} \r\nYou guessed it correctly 😀`);
-        counter++;
-        break;
+        alert(`Random Computer Generated Number:  ${randomNumber}\r\nYour guess: ${userNumber} \r\nYou guessed the number correctly 😀`);
+        isCorrect = true;
+        score++;
     }
 }
 
-if (parseInt(userNumber) !== randomNumber) {
-    alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guesses}\r\nYou did not guess it correctly 😔`);
+//Displays a message after the user used up all 4 tries without guessing the correct answer
+if (!isCorrect) {
+    alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guessesOne}\r\nYou did not guess the number correctly 😔`);
 }
 
-let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
-
-let arrayOfAnswers = ['Maui', 'Kyoto', 'Albay', 'Oslo', 'Dubai', 'Singapore', 'Sevilla', 'Reykjavik', 'Chania', 'Palermo'];
-
+//Third game;
+const messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
+const arrayOfAnswers = ['Maui', 'Kyoto', 'Albay', 'Oslo', 'Dubai', 'Singapore', 'Sevilla', 'Reykjavik', 'Chania', 'Palermo'];
+//Array container for user guesses
+const guessesTwo = []
+//resets tries to 6 and isCorrect to false
 tries = 6;
-
-let isCorrect = false;
-
+isCorrect = false;
+//Loop will run until tries is a falsy or answer is correct
 while (tries && !isCorrect) {
-    let guess = prompt("Enter your guess:").toUpperCase();
+    let userGuess = prompt("Enter your guess:").toUpperCase();
+    //Pushes user input into guessesTwo Array
+    guessesTwo.push(userGuess);
     tries--;
     for (let correctAnswer of arrayOfAnswers) {
-        if (guess === correctAnswer.toUpperCase()) {
+        if (userGuess === correctAnswer.toUpperCase()) {
             alert(`That is correct! 😀\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
             isCorrect = true;
-            counter++;
-            break;
+            score++;
         }
     }
-    if (!isCorrect) {
-        alert(`Try again.\r\nGuess remaining: ${tries}`)
+    if (tries > 0 && !isCorrect) {
+        alert(`Try again 😔\r\nGuess remaining: ${tries}`)
     }
 }
-
+//Displays a message after the user used up all 6 tries without guessing the correct answer
 if (!isCorrect) {
-    alert(`You didn't give a correct answer 😔\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
+    alert(`You didn't give a correct answer 😔\r\nYour guesses: ${guessesTwo}\r\n\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
 }
-
-
-let messageFour = alert(`You answered ${counter} out of 7 questions correctly. Welcome to my page ${user}! 😀`);
+const messageFour = alert(`You answered ${score} out of 7 questions correctly. Welcome to my page ${user}! 😀`);
 
 
 
