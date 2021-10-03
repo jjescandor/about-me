@@ -17,20 +17,29 @@ const user = namePrompt()
 
 //First game
 const messageOne = alert(`Hello ${user}, before I let you in, you're gonna play three games. 🎲 🎮\r\nThe first game will test how well you know me.`);
+let validAnswer = false;
 //Checks if answer is correct
 const checkAnswer = (answer) => {
-    // while (answer !== 'NO' || answer !== 'N' || answer !== 'YES' || answer !== 'Y') {
-    //     answer = prompt(`Invalid response 😔\r\nEnter a valid answer`).toUpperCase();
-    // }
+    //Checks if the user response is valid
+    do {
+        if (answer === 'NO' || answer === 'N' || answer === 'YES' || answer === 'Y') {
+            validAnswer = true;
+            break;
+        } else {
+            validAnswer = false;
+            answer = prompt(`Invalid response 😔 Enter a valid answer (Yes/No):`).toUpperCase();
+        }
+    } while (!validAnswer)
+    //Checks if the user response is correct
     if (answer === 'NO' || answer === 'N') {
         alert(`I'm sorry, you didn't get it right 😔`);
     } else if (answer === 'YES' || answer === 'Y') {
         alert(`That's correct! 😀`);
         score++;
-    } else {
-        alert('Invalid Response 😔');
     }
 }
+
+
 let score = 0;
 const questionNumber = () => {
     if (score > 1) {
@@ -76,7 +85,7 @@ while (tries && !isCorrect) {
     tries--;
     //Pushes valid user input into guessesOne Array
     guessesOne.push(userNumber);
-    //Checks valid user input againts random computer generated number
+    //Checks valid user input against randomly generated number
     if (parseInt(userNumber) > randomNumber) {
         alert(`Too High 😔\r\n\Guess reamining: ${tries}`);
     } else if (parseInt(userNumber) < randomNumber) {
@@ -107,6 +116,7 @@ while (tries && !isCorrect) {
     //Pushes user input into guessesTwo Array
     guessesTwo.push(userGuess);
     tries--;
+    //Checks the user response against the list of correct answers in the array
     for (let correctAnswer of arrayOfAnswers) {
         if (userGuess === correctAnswer.toUpperCase()) {
             alert(`That is correct! 😀\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
