@@ -58,9 +58,9 @@ do {
 let messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
 
 let guesses = [];
-let userNumber = prompt(`Enter a number`);
+let userNumber = prompt(`Enter a number:`);
 while (isNaN(parseInt(userNumber))) {
-    userNumber = prompt(`Enter a valid number`);
+    userNumber = prompt(`Enter a valid number:`);
 }
 
 guesses.push(userNumber);
@@ -75,7 +75,7 @@ for (let i = 0; i < 3; i++) {
         alert(`Too High`);
         userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
         while (isNaN(parseInt(userNumber))) {
-            userNumber = prompt(`Enter a valid number`);
+            userNumber = prompt(`Enter a valid number:`);
         }
         guesses.push(userNumber);
     } else if (parseInt(userNumber) < randomNumber) {
@@ -83,7 +83,7 @@ for (let i = 0; i < 3; i++) {
         alert(`Too Low`);
         userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
         while (isNaN(parseInt(userNumber))) {
-            userNumber = prompt(`Enter a valid number`);
+            userNumber = prompt(`Enter a valid number:`);
         }
         guesses.push(userNumber);
     } else if (parseInt(userNumber) === randomNumber) {
@@ -106,7 +106,7 @@ tries = 6;
 let isCorrect = false;
 
 while (tries && !isCorrect) {
-    let guess = prompt("Enter your guess").toUpperCase();
+    let guess = prompt("Enter your guess:").toUpperCase();
     tries--;
     for (let correctAnswer of arrayOfAnswers) {
         if (guess === correctAnswer) {
