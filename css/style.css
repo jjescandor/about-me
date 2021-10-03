@@ -1,3 +1,4 @@
+
 body{
    background-color:whitesmoke;
    margin:10px;
@@ -35,6 +36,47 @@ nav,
     color:red;
     cursor:pointer;
 }
+
+:root {
+    --characters: 25;
+  }
+  
+  .name-animation{
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: monospace;
+    overflow: hidden;
+  }
+  
+  .typewriter {
+    color:#102E44;
+    width: 0;
+    padding: 10px 0;
+    font-size: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-name: blinking, typing;
+    animation-duration: 0.5s, 5s;
+    animation-timing-function: linear, steps(var(--characters));
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes blinking {
+    from {
+      border-right: 0 solid transparent;
+    }
+  }
+  
+  @keyframes typing {
+    80%, 100% {
+      width: calc(var(--characters) * 0.5ch);
+    }
+  }
 
 main{
     margin:0 4rem;
