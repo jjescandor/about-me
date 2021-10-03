@@ -62,7 +62,6 @@ let userNumber = prompt(`Enter a number`);
 while (isNaN(parseInt(userNumber))) {
     userNumber = prompt(`Enter a valid number`);
 }
-console.log(userNumber * 2)
 
 guesses.push(userNumber);
 
@@ -88,14 +87,14 @@ for (let i = 0; i < 3; i++) {
         }
         guesses.push(userNumber);
     } else if (parseInt(userNumber) === randomNumber) {
-        alert(`Computer Generated Number:  ${randomNumber}\r\nYour guess: ${userNumber} \r\nYou got it right 😀`);
+        alert(`Computer Generated Number:  ${randomNumber}\r\nYour guess: ${userNumber} \r\nYou guessed it correctly 😀`);
         counter++;
         break;
     }
 }
 
 if (parseInt(userNumber) !== randomNumber) {
-    alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guesses}\r\nYou did not get it right 😔`);
+    alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guesses}\r\nYou did not guess it correctly 😔`);
 }
 
 let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
