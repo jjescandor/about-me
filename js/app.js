@@ -99,7 +99,7 @@ if (parseInt(userNumber) !== randomNumber) {
 
 let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
 
-let arrayOfAnswers = ['MAUI', 'KYOTO', 'ALBAY', 'OSLO', 'DUBAI', 'SINGAPORE', 'SEVILLA', 'REYKJAVIK', 'CHANIA', 'PALERMO'];
+let arrayOfAnswers = ['Maui', 'Kyoto', 'Albay', 'Oslo', 'Dubai', 'Singapore', 'Sevilla', 'Reykjavik', 'Chania', 'Palermo'];
 
 tries = 6;
 
@@ -109,7 +109,7 @@ while (tries && !isCorrect) {
     let guess = prompt("Enter your guess:").toUpperCase();
     tries--;
     for (let correctAnswer of arrayOfAnswers) {
-        if (guess === correctAnswer) {
+        if (guess === correctAnswer.toUpperCase()) {
             alert(`That is correct! 😀\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
             isCorrect = true;
             counter++;
