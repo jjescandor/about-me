@@ -55,24 +55,28 @@ do {
     }
 } while (counter <= 0)
 
-let messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess that number.`);
+let messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
 
 let guesses = [];
-let userNumber = prompt("Enter a number");
+let userNumber = prompt(`Enter a number`);
 console.log(userNumber * 2)
 
 guesses.push(userNumber);
 
 let randomNumber = Math.floor(Math.random() * 9);
 
+let tries = 4;
+
 for (let i = 0; i < 3; i++) {
     if (parseInt(userNumber) > randomNumber) {
-        alert("Too High");
-        userNumber = prompt(`Enter a number again`);
+        tries--;
+        alert(`Too High`);
+        userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
         guesses.push(userNumber);
     } else if (parseInt(userNumber) < randomNumber) {
-        alert("Too Low");
-        userNumber = prompt(`Enter a number again`);
+        tries--;
+        alert(`Too Low`);
+        userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
         guesses.push(userNumber);
     } else if (parseInt(userNumber) === randomNumber) {
         alert(`Computer Generated Number:  ${randomNumber}\r\nYour guess: ${userNumber} \r\nYou got it right 😀`);
@@ -85,10 +89,12 @@ if (parseInt(userNumber) !== randomNumber) {
     alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guesses}\r\nYou did not get it right 😔`);
 }
 
-let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.`);
+let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to get the correct answer`);
 
 let arrayOfAnswers = ['MAUI', 'KYOTO', 'ALBAY', 'OSLO', 'DUBAI', 'SINGAPORE', 'SEVILLA', 'REYKJAVIK', 'CHANIA', 'PALERMO'];
-let tries = 6;
+
+tries = 6;
+
 let isCorrect = false;
 
 while (tries && !isCorrect) {
