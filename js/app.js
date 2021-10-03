@@ -59,6 +59,9 @@ let messageTwo = alert(`For the second game, the computer will generate a random
 
 let guesses = [];
 let userNumber = prompt(`Enter a number`);
+while (isNaN(parseInt(userNumber))) {
+    userNumber = prompt(`Enter a valid number`);
+}
 console.log(userNumber * 2)
 
 guesses.push(userNumber);
@@ -72,11 +75,17 @@ for (let i = 0; i < 3; i++) {
         tries--;
         alert(`Too High`);
         userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
+        while (isNaN(parseInt(userNumber))) {
+            userNumber = prompt(`Enter a valid number`);
+        }
         guesses.push(userNumber);
     } else if (parseInt(userNumber) < randomNumber) {
         tries--;
         alert(`Too Low`);
         userNumber = prompt(`Enter a number again.\r\nGuess reamining: ${tries}`);
+        while (isNaN(parseInt(userNumber))) {
+            userNumber = prompt(`Enter a valid number`);
+        }
         guesses.push(userNumber);
     } else if (parseInt(userNumber) === randomNumber) {
         alert(`Computer Generated Number:  ${randomNumber}\r\nYour guess: ${userNumber} \r\nYou got it right 😀`);
@@ -89,7 +98,7 @@ if (parseInt(userNumber) !== randomNumber) {
     alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guesses}\r\nYou did not get it right 😔`);
 }
 
-let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to get the correct answer`);
+let messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
 
 let arrayOfAnswers = ['MAUI', 'KYOTO', 'ALBAY', 'OSLO', 'DUBAI', 'SINGAPORE', 'SEVILLA', 'REYKJAVIK', 'CHANIA', 'PALERMO'];
 
