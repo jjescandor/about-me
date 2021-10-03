@@ -119,7 +119,7 @@ while (tries && !isCorrect) {
     //Checks the user response against the list of correct answers in the array
     for (let correctAnswer of arrayOfAnswers) {
         if (userGuess === correctAnswer.toUpperCase()) {
-            alert(`That is correct! 😀\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
+            alert(`${userGuess} is correct! 😀\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
             isCorrect = true;
             score++;
         }
