@@ -50,16 +50,41 @@ const questionNumber = () => {
 }
 //Loop will run until user inputs at least one answer correctly
 do {
-    let garden = prompt(`Do I like gardening? (Yes/No) 🪴`).toUpperCase();
-    checkAnswer(garden);
+    function questionOne() {
+        let garden = prompt(`Do I like gardening? (Yes/No) 🪴`).toUpperCase();
+        checkAnswer(garden);
+    };
+
+    questionOne();
+
+    function questionTwo() {
     let song = prompt(`Is 'Both Sides Now' one of my favorite songs? (Yes/No) 🎶`).toUpperCase();
     checkAnswer(song);
+    };
+    
+    questionTwo();
+
+    function questionThree() {
     let paint = prompt(`Do I like to paint? (Yes/No) 🎨`).toUpperCase();
     checkAnswer(paint);
+    };
+
+    questionThree();
+
+    function questionFour() {
     let podcast = prompt(`Do I like to listen to podcast on my way to work? (Yes/No) 🎧`).toUpperCase();
     checkAnswer(podcast);
+    };
+
+    questionFour();
+
+    function questionFive() {
     let dog = prompt(`Is my dog's name Kai? (Yes/No) 🐕`).toUpperCase();
     checkAnswer(dog);
+    };
+
+    questionFive();
+
     questionNumber();
     if (score === 0) {
         alert(`You must answer at least one question about me correctly to proceed.`);
@@ -67,10 +92,15 @@ do {
 } while (score <= 0)
 
 //Second Game
-const messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
+
 //Initializes tries to 4 and isCorrect to false
 let tries = 4;
 let isCorrect = false;
+
+function questionSix () {
+
+const messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
+
 //Array container for user guesses
 const guessesOne = [];
 //Generates the random number
@@ -101,8 +131,13 @@ while (tries && !isCorrect) {
 if (!isCorrect) {
     alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guessesOne}\r\nYou did not guess the number correctly 😔`);
 }
+};
+
+questionSix();
 
 //Third game;
+
+function questionSeven() {
 const messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
 const arrayOfAnswers = ['Maui', 'Kyoto', 'Albay', 'Oslo', 'Dubai', 'Singapore', 'Sevilla', 'Reykjavik', 'Chania', 'Palermo'];
 //Array container for user guesses
@@ -128,11 +163,17 @@ while (tries && !isCorrect) {
         alert(`Try again 😔\r\nGuess remaining: ${tries}`)
     }
 }
+
 //Displays a message after the user used up all 6 tries without guessing the correct answer
 if (!isCorrect) {
     alert(`You didn't give a correct answer 😔\r\nYour guesses: ${guessesTwo}\r\n\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
 }
+};
+questionSeven();
+
+
 const messageFour = alert(`You answered ${score} out of 7 questions correctly. Welcome to my page ${user}! 😀`);
+
 
 
 
