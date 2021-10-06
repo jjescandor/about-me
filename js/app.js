@@ -92,6 +92,8 @@ do {
 } while (score <= 0)
 
 //Second Game
+function questionSix () {
+
 const messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
 //Initializes tries to 4 and isCorrect to false
 let tries = 4;
@@ -126,6 +128,9 @@ while (tries && !isCorrect) {
 if (!isCorrect) {
     alert(`Computer Generated Number: ${randomNumber}\r\nYour guesses: ${guessesOne}\r\nYou did not guess the number correctly 😔`);
 }
+};
+
+questionSix();
 
 //Third game;
 const messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
