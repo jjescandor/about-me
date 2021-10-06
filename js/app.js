@@ -78,8 +78,12 @@ do {
 
     questionFour();
 
+    function questionFive() {
     let dog = prompt(`Is my dog's name Kai? (Yes/No) 🐕`).toUpperCase();
     checkAnswer(dog);
+    };
+
+    questionFive();
 
     questionNumber();
     if (score === 0) {
