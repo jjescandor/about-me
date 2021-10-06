@@ -50,8 +50,13 @@ const questionNumber = () => {
 }
 //Loop will run until user inputs at least one answer correctly
 do {
-    let garden = prompt(`Do I like gardening? (Yes/No) 🪴`).toUpperCase();
-    checkAnswer(garden);
+    function questionOne() {
+        let garden = prompt(`Do I like gardening? (Yes/No) 🪴`).toUpperCase();
+        checkAnswer(garden);
+    };
+
+    questionOne();
+    
     let song = prompt(`Is 'Both Sides Now' one of my favorite songs? (Yes/No) 🎶`).toUpperCase();
     checkAnswer(song);
     let paint = prompt(`Do I like to paint? (Yes/No) 🎨`).toUpperCase();
