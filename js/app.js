@@ -92,12 +92,15 @@ do {
 } while (score <= 0)
 
 //Second Game
-function questionSix () {
 
-const messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
 //Initializes tries to 4 and isCorrect to false
 let tries = 4;
 let isCorrect = false;
+
+function questionSix () {
+
+const messageTwo = alert(`For the second game, the computer will generate a random number from 0 - 9.\r\nYou will have four tries to guess the correct answer.`);
+
 //Array container for user guesses
 const guessesOne = [];
 //Generates the random number
@@ -133,6 +136,8 @@ if (!isCorrect) {
 questionSix();
 
 //Third game;
+
+function questionSeven() {
 const messageThree = alert(`For the third and last game, name at least one place (city) that is in the top ten of my favorite places.\r\nYou will have 6 tries to guess the correct answer`);
 const arrayOfAnswers = ['Maui', 'Kyoto', 'Albay', 'Oslo', 'Dubai', 'Singapore', 'Sevilla', 'Reykjavik', 'Chania', 'Palermo'];
 //Array container for user guesses
@@ -158,11 +163,17 @@ while (tries && !isCorrect) {
         alert(`Try again 😔\r\nGuess remaining: ${tries}`)
     }
 }
+
 //Displays a message after the user used up all 6 tries without guessing the correct answer
 if (!isCorrect) {
     alert(`You didn't give a correct answer 😔\r\nYour guesses: ${guessesTwo}\r\n\r\nHere are all the possible answers:\r\n\r\n${arrayOfAnswers}`);
 }
+};
+questionSeven();
+
+
 const messageFour = alert(`You answered ${score} out of 7 questions correctly. Welcome to my page ${user}! 😀`);
+
 
 
 
