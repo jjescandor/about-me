@@ -64,12 +64,19 @@ do {
     
     questionTwo();
 
+    function questionThree() {
     let paint = prompt(`Do I like to paint? (Yes/No) 🎨`).toUpperCase();
     checkAnswer(paint);
+    }
+
+    questionThree();
+
     let podcast = prompt(`Do I like to listen to podcast on my way to work? (Yes/No) 🎧`).toUpperCase();
     checkAnswer(podcast);
+
     let dog = prompt(`Is my dog's name Kai? (Yes/No) 🐕`).toUpperCase();
     checkAnswer(dog);
+
     questionNumber();
     if (score === 0) {
         alert(`You must answer at least one question about me correctly to proceed.`);
