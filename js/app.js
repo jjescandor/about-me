@@ -56,9 +56,14 @@ do {
     };
 
     questionOne();
-    
+
+    function questionTwo() {
     let song = prompt(`Is 'Both Sides Now' one of my favorite songs? (Yes/No) 🎶`).toUpperCase();
     checkAnswer(song);
+    }
+    
+    questionTwo();
+
     let paint = prompt(`Do I like to paint? (Yes/No) 🎨`).toUpperCase();
     checkAnswer(paint);
     let podcast = prompt(`Do I like to listen to podcast on my way to work? (Yes/No) 🎧`).toUpperCase();
